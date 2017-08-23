@@ -1,4 +1,4 @@
-html {
+body {
   background: #fff;
   text-align: center;
 }
@@ -9,11 +9,11 @@ html {
   position: relative;
   display: inline-block;
   text-decoration: none;
-  font-size: 6em;
+  font-size: 100px;
   color: #0f0f0f;
   line-height: 1;
   letter-spacing: -.1em;
-  transition: color 0.3s ease-out;
+  transition: color 0.3s;
 }
 .particle-link:hover,
 .particle-link:focus {
@@ -21,12 +21,20 @@ html {
 }
 .particle {
   position: absolute;
+  font-size: 0.2em;
   top: 50%;
   left: 50%;
-  width: 1rem;
-  height: 1rem;
+  margin-left: -1em;
+  width: 1em;
+  height: 1em;
   border-radius: 100%;
-  border: 1px solid rgba(0,0,0,0.5);
+  border: 1px solid #000;
+  opacity: 0.5;
+  transition: border-color 0.3s;
+}
+.particle-link:hover .particle,
+.particle-link:focus .particle {
+  border-color: orange;
 }
 .original .particle-1 {
   animation: particle-a 1.4s infinite linear;
@@ -67,39 +75,39 @@ html {
 }
 @keyframes cycle {
   0% {
-    transform: translate3D(0,-3rem,0);
+    transform: translate3D(0, -3em, 0);
     z-index: 1;
     animation-timing-function: ease-in-out;
     opacity: 1;
   }
-
+  
   25% {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.5em;
+    height: 1.5em;
     opacity: 1;
   }
-
+  
   50% {
-    transform: translate3D(0, 3rem, 0);
+    transform: translate3D(0, 3em, 0);
     opacity: 1;
     z-index: 1;
     animation-timing-function: ease-in-out;
     opacity: 1;
   }
-
+  
   55% {
     z-index: -1;
     opacity: 1;
   }
-
+  
   75% {
-    width: .75rem;
-    height: .75rem;
-    opacity: .5;
+    width: 0.75em;
+    height: 0.75em;
+    opacity: 0.5;
   }
-
+  
   100% {
-   transform: translate3D(0,-3rem,0);
+    transform: translate3D(0, -3em, 0); 
     z-index: -1;
     opacity: 1;
   }
@@ -112,111 +120,111 @@ html {
     left: 100%;
   }
   100% {
-   left: 0%;
+    left: 0%;
   }
 }
 
 @keyframes particle-a {
   0% {
-   transform: translate3D(-3rem,-3rem,0);
+    transform: translate3D(-3em, -3em, 0);
     z-index: 1;
     animation-timing-function: ease-in-out;
   }
-
+  
   25% {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.5em;
+    height: 1.5em;
   }
-
+  
   50% {
-    transform: translate3D(4rem, 3rem, 0);
+    transform: translate3D(4em, 3em, 0);
     opacity: 1;
     z-index: 1;
     animation-timing-function: ease-in-out;
   }
-
+  
   55% {
     z-index: -1;
   }
-
+  
   75% {
-    width: .75rem;
-    height: .75rem;
-    opacity: .5;
+    width: 0.75em;
+    height: 0.75em;
+    opacity: 0.5;
   }
-
+  
   100% {
-   transform: translate3D(-3rem,-3rem,0);
+    transform: translate3D(-3em, -3em, 0); 
     z-index: -1;
   }
 }
 
 @keyframes particle-b {
   0% {
-   transform: translate3D(3rem,-3rem,0);
+    transform: translate3D(3em, -3em, 0);
     z-index: 1;
     animation-timing-function: ease-in-out;
   }
-
+  
   25% {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.5em;
+    height: 1.5em;
   }
-
+  
   50% {
-    transform: translate3D(-3rem, 3.5rem, 0);
+    transform: translate3D(-3em, 3.5em, 0);
     opacity: 1;
     z-index: 1;
     animation-timing-function: ease-in-out;
   }
-
+  
   55% {
     z-index: -1;
   }
-
+  
   75% {
-    width: .5rem;
-    height: .5rem;
-    opacity: .5;
+    width: 0.5em;
+    height: 0.5em;
+    opacity: 0.5;
   }
-
+  
   100% {
-   transform: translate3D(3rem,-3rem,0);
+    transform: translate3D(3em, -3em, 0); 
     z-index: -1;
   }
 }
 
 @keyframes particle-c {
   0% {
-   transform: translate3D(-1rem,-3rem,0);
+    transform: translate3D(-1em, -3em, 0);
     z-index: 1;
     animation-timing-function: ease-in-out;
   }
-
+  
   25% {
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1.3em;
+    height: 1.3em;
   }
-
+  
   50% {
-    transform: translate3D(2rem, 2.5rem, 0);
+    transform: translate3D(2em, 2.5em, 0);
     opacity: 1;
     z-index: 1;
     animation-timing-function: ease-in-out;
   }
-
+  
   55% {
     z-index: -1;
   }
-
+  
   75% {
-    width: .5rem;
-    height: .5rem;
-    opacity: .5;
+    width: 0.5em;
+    height: 0.5em;
+    opacity: 0.5;
   }
-
+  
   100% {
-   transform: translate3D(-1rem,-3rem,0);
+    transform: translate3D(-1em, -3em, 0); 
     z-index: -1;
   }
 }
